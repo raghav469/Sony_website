@@ -1,27 +1,59 @@
-React + TypeScript + Vite
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sony_website
 
-Currently, two official plugins are available:
+A minimal React + TypeScript + Vite setup with built-in HMR (Hot Module Replacement) and ESLint integration.
 
-@vitejs/plugin-react uses Babel for Fast Refresh
-@vitejs/plugin-react-swc uses SWC for Fast Refresh
+## 🔧 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚛️ React 18
+- ✨ TypeScript
+- ⚡ Vite for fast development
+- 🔁 HMR (Hot Module Replacement)
+- 🧹 ESLint setup with extendable rules
 
+## 📦 Plugins Used
+
+Vite supports two official React plugins:
+
+- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) — uses **Babel** for Fast Refresh
+- [`@vitejs/plugin-react-swc`](https://github.com/vitejs/vite-plugin-react-swc) — uses **SWC** for Fast Refresh
+
+You can choose either depending on your project requirements.
+
+## ✅ Recommended ESLint Setup
+
+If you're working on a **production-grade** TypeScript application, it's advised to enable type-aware linting.
+
+Update your ESLint config like so:
+
+```ts
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
+    // Recommended for projects using type-checking
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
+
+    // Optionally, for stricter rule enforcement
+    // ...tseslint.configs.strictTypeChecked,
+
+    // Optionally, for stylistic preferences
+    // ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
+🚀 Getting Started
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
