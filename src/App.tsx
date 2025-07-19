@@ -3,7 +3,7 @@ import AppBar from "./components/AppBar";
 import LandingPage from "./pages/LandingPage";
 import Footer from "./components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
-
+ 
 import "./App.css";
 
 const App = () => {
